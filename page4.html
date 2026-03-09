@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treatment & Diet Plans</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f9f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .disease-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .disease-header {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4CAF50;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .view-details {
+      background-color: #4CAF50;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      margin-top: 15px;
+    }
+
+    input[type="checkbox"]:checked ~ .details {
+      max-height: 800px;
+    }
+
+    .section {
+      margin-bottom: 15px;
+    }
+
+    .section h3 {
+      color: #2e7d32;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e8f5e9;
+    }
+
+    .next-btn {
+      display: block;
+      width: 220px;
+      margin: 30px auto 0;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .next-btn:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Treatment & Diet Plans</h1>
+
+  <!-- Disease 1: Diabetes -->
+  <div class="disease-card">
+    <div class="disease-header">
+      Diabetes
+      <label class="view-details" for="t1">View Details</label>
+    </div>
+    <input type="checkbox" id="t1">
+    <div class="details">
+
+      <div class="section">
+        <h3>Diet Plan</h3>
+        <ul>
+          <li>Breakfast: Oats porridge with ghee and banana</li>
+          <li>Mid-morning: Green tea + almonds</li>
+          <li>Lunch: Steamed vegetables, brown rice, moong dal</li>
+          <li>Evening Snack: Apple or cucumber slices</li>
+          <li>Dinner: Khichdi or light vegetable soup</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Ayurvedic Recommendations</h3>
+        <ul>
+          <li>Include bitter and astringent foods.</li>
+          <li>Avoid sugar, fried, and oily foods.</li>
+          <li>Drink warm water with turmeric daily.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Tablets / Medicines</h3>
+        <table>
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Timing</th>
+          </tr>
+          <tr>
+            <td>Ayurvedic Diabetic Tablet A</td>
+            <td>2 tablets</td>
+            <td>Morning & Evening</td>
+          </tr>
+          <tr>
+            <td>Herbal Blood Sugar Control</td>
+            <td>1 tablet</td>
+            <td>After Meals</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Disease 2: Hypertension -->
+  <div class="disease-card">
+    <div class="disease-header">
+      Hypertension
+      <label class="view-details" for="t2">View Details</label>
+    </div>
+    <input type="checkbox" id="t2">
+    <div class="details">
+
+      <div class="section">
+        <h3>Diet Plan</h3>
+        <ul>
+          <li>Breakfast: Oatmeal with fresh fruits</li>
+          <li>Mid-morning: Coconut water</li>
+          <li>Lunch: Steamed vegetables, brown rice, lentils</li>
+          <li>Evening Snack: Green salad</li>
+          <li>Dinner: Light vegetable soup and chapati</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Ayurvedic Recommendations</h3>
+        <ul>
+          <li>Reduce salt and spicy foods.</li>
+          <li>Include cooling foods like cucumber and ghee.</li>
+          <li>Practice yoga and pranayama daily.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Tablets / Medicines</h3>
+        <table>
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Timing</th>
+          </tr>
+          <tr>
+            <td>Herbal Blood Pressure Tablet B</td>
+            <td>1 tablet</td>
+            <td>Morning</td>
+          </tr>
+          <tr>
+            <td>Ayurvedic Heart Health Capsule</td>
+            <td>2 capsules</td>
+            <td>Evening</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Disease 3: Joint Pain -->
+  <div class="disease-card">
+    <div class="disease-header">
+      Joint Pain
+      <label class="view-details" for="t3">View Details</label>
+    </div>
+    <input type="checkbox" id="t3">
+    <div class="details">
+
+      <div class="section">
+        <h3>Diet Plan</h3>
+        <ul>
+          <li>Breakfast: Warm milk with turmeric</li>
+          <li>Mid-morning: Fruit smoothie</li>
+          <li>Lunch: Steamed vegetables, rice, moong dal</li>
+          <li>Evening Snack: Nuts & herbal tea</li>
+          <li>Dinner: Khichdi or vegetable soup</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Ayurvedic Recommendations</h3>
+        <ul>
+          <li>Include anti-inflammatory foods.</li>
+          <li>Avoid fried and heavy meals.</li>
+          <li>Practice gentle exercises and yoga.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Tablets / Medicines</h3>
+        <table>
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Timing</th>
+          </tr>
+          <tr>
+            <td>Joint Care Tablet C</td>
+            <td>2 tablets</td>
+            <td>Morning & Evening</td>
+          </tr>
+          <tr>
+            <td>Herbal Pain Relief Capsule</td>
+            <td>1 capsule</td>
+            <td>After Meals</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Disease 4: Obesity -->
+  <div class="disease-card">
+    <div class="disease-header">
+      Obesity
+      <label class="view-details" for="t4">View Details</label>
+    </div>
+    <input type="checkbox" id="t4">
+    <div class="details">
+
+      <div class="section">
+        <h3>Diet Plan</h3>
+        <ul>
+          <li>Breakfast: Oatmeal with fruits</li>
+          <li>Mid-morning: Green smoothie</li>
+          <li>Lunch: Steamed vegetables and quinoa</li>
+          <li>Evening Snack: Fruits or sprouts</li>
+          <li>Dinner: Light vegetable soup</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Ayurvedic Recommendations</h3>
+        <ul>
+          <li>Avoid processed and oily foods.</li>
+          <li>Practice daily exercise and yoga.</li>
+          <li>Drink warm water with lemon in the morning.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Tablets / Medicines</h3>
+        <table>
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Timing</th>
+          </tr>
+          <tr>
+            <td>Weight Management Tablet D</td>
+            <td>2 tablets</td>
+            <td>Morning</td>
+          </tr>
+          <tr>
+            <td>Herbal Fat Burner Capsule</td>
+            <td>1 capsule</td>
+            <td>Evening</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Disease 5: Skin Disorders -->
+  <div class="disease-card">
+    <div class="disease-header">
+      Skin Disorders
+      <label class="view-details" for="t5">View Details</label>
+    </div>
+    <input type="checkbox" id="t5">
+    <div class="details">
+
+      <div class="section">
+        <h3>Diet Plan</h3>
+        <ul>
+          <li>Breakfast: Fresh fruit smoothie</li>
+          <li>Mid-morning: Herbal tea</li>
+          <li>Lunch: Steamed vegetables, rice, dal</li>
+          <li>Evening Snack: Nuts and seeds</li>
+          <li>Dinner: Light khichdi or soup</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Ayurvedic Recommendations</h3>
+        <ul>
+          <li>Include cooling and moisturizing foods.</li>
+          <li>Avoid oily, fried, and junk foods.</li>
+          <li>Use herbal pastes or oils externally as advised.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Tablets / Medicines</h3>
+        <table>
+          <tr>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Timing</th>
+          </tr>
+          <tr>
+            <td>Herbal Skin Care Tablet E</td>
+            <td>2 tablets</td>
+            <td>Morning</td>
+          </tr>
+          <tr>
+            <td>Ayurvedic Anti-allergy Capsule</td>
+            <td>1 capsule</td>
+            <td>Evening</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Next Button -->
+  <a href="index.html" class="next-btn">Back to Home</a>
+
+</body>
+</html>
+

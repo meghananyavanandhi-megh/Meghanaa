@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diseases & Specialists</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f9f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .disease-box {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .disease-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .disease-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4CAF50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .view-details {
+      background-color: #4CAF50;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      margin-top: 15px;
+    }
+
+    input[type="checkbox"]:checked ~ .details {
+      max-height: 600px;
+    }
+
+    .doctor-list {
+      margin-top: 10px;
+    }
+
+    .doctor-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e8f5e9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+
+    .doctor-item input[type="radio"] {
+      margin-left: 10px;
+    }
+
+    .next-btn {
+      display: block;
+      width: 220px;
+      margin: 30px auto 0;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .next-btn:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Diseases & Specialists</h1>
+
+  <!-- Disease 1 -->
+  <div class="disease-box">
+    <div class="disease-title">
+      Diabetes
+      <label class="view-details" for="d1">View Details</label>
+    </div>
+    <input type="checkbox" id="d1">
+    <div class="details">
+      <div class="doctor-list">
+        <div class="doctor-item">
+          <span>Dr. Asha Nair - Endocrinologist</span>
+          <span>+91 98765 43210 <input type="radio" name="doctor-d1"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Rajesh Kumar - Diabetic Specialist</span>
+          <span>+91 91234 56789 <input type="radio" name="doctor-d1"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Meena Sharma - Nutritionist</span>
+          <span>+91 99887 77665 <input type="radio" name="doctor-d1"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Vinod Joshi - Ayurvedic Diabetic Expert</span>
+          <span>+91 98123 44556 <input type="radio" name="doctor-d1"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease 2 -->
+  <div class="disease-box">
+    <div class="disease-title">
+      Hypertension
+      <label class="view-details" for="d2">View Details</label>
+    </div>
+    <input type="checkbox" id="d2">
+    <div class="details">
+      <div class="doctor-list">
+        <div class="doctor-item">
+          <span>Dr. Anil Verma - Cardiology</span>
+          <span>+91 98112 34567 <input type="radio" name="doctor-d2"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Meera Joshi - Ayurvedic Therapist</span>
+          <span>+91 98765 11122 <input type="radio" name="doctor-d2"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Sunil Gupta - General Physician</span>
+          <span>+91 91234 22334 <input type="radio" name="doctor-d2"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Priya Sharma - Herbal Specialist</span>
+          <span>+91 99887 55678 <input type="radio" name="doctor-d2"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease 3 -->
+  <div class="disease-box">
+    <div class="disease-title">
+      Joint Pain
+      <label class="view-details" for="d3">View Details</label>
+    </div>
+    <input type="checkbox" id="d3">
+    <div class="details">
+      <div class="doctor-list">
+        <div class="doctor-item">
+          <span>Dr. Pooja Reddy - Orthopedic</span>
+          <span>+91 99887 44556 <input type="radio" name="doctor-d3"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Rohit Mehra - Ayurvedic Physiotherapy</span>
+          <span>+91 98112 55667 <input type="radio" name="doctor-d3"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Kavita Singh - Rehabilitation Specialist</span>
+          <span>+91 98765 33445 <input type="radio" name="doctor-d3"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Neeraj Gupta - Joint Pain Expert</span>
+          <span>+91 91234 77889 <input type="radio" name="doctor-d3"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease 4 -->
+  <div class="disease-box">
+    <div class="disease-title">
+      Obesity
+      <label class="view-details" for="d4">View Details</label>
+    </div>
+    <input type="checkbox" id="d4">
+    <div class="details">
+      <div class="doctor-list">
+        <div class="doctor-item">
+          <span>Dr. Nisha Kapoor - Nutritionist</span>
+          <span>+91 98765 99887 <input type="radio" name="doctor-d4"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Sanjay Rao - Weight Management Expert</span>
+          <span>+91 91234 66778 <input type="radio" name="doctor-d4"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Anjali Mehta - Ayurvedic Dietitian</span>
+          <span>+91 99887 22334 <input type="radio" name="doctor-d4"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease 5 -->
+  <div class="disease-box">
+    <div class="disease-title">
+      Skin Disorders
+      <label class="view-details" for="d5">View Details</label>
+    </div>
+    <input type="checkbox" id="d5">
+    <div class="details">
+      <div class="doctor-list">
+        <div class="doctor-item">
+          <span>Dr. Rekha Sharma - Dermatologist</span>
+          <span>+91 98112 33445 <input type="radio" name="doctor-d5"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Amit Jain - Ayurvedic Skin Expert</span>
+          <span>+91 98765 44556 <input type="radio" name="doctor-d5"></span>
+        </div>
+        <div class="doctor-item">
+          <span>Dr. Priya Verma - Herbal Skin Specialist</span>
+          <span>+91 99887 66778 <input type="radio" name="doctor-d5"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next Button -->
+  <a href="\page4.html" class="next-btn">Next: Treatment & Diet</a>
+
+</body>
+</html>
+
+
+

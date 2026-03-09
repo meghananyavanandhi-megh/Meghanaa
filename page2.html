@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ayurvedic Diseases & Precautions</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f9f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .view-btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .view-btn:hover {
+      background-color: #388e3c;
+    }
+
+    /* Modal */
+    .details {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      width: 85%;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+      z-index: 100;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translate(-50%, -45%);}
+      to {opacity: 1; transform: translate(-50%, -50%);}
+    }
+
+    .details:target {
+      display: block;
+    }
+
+    .details h2 {
+      color: #2e7d32;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .details h3 {
+      color: #388e3c;
+      margin: 15px 0 5px 0;
+    }
+
+    .details ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .close-btn, .contact-btn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .close-btn a, .contact-btn a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .close-btn a {
+      background-color: #f44336;
+    }
+
+    .close-btn a:hover {
+      background-color: #d32f2f;
+    }
+
+    .contact-btn a {
+      background-color: #2e7d32;
+    }
+
+    .contact-btn a:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Background dim when modal opens */
+    :target ~ .container {
+      opacity: 0.15;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <header>Ayurvedic Diseases & Precautions</header>
+
+  <!-- Modal Popups for 10 diseases -->
+  <div id="diabetes" class="details">
+    <h2>Diabetes</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Excessive thirst and hunger</li>
+      <li>Frequent urination</li>
+      <li>Fatigue and weakness</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Maintain a balanced diet</li>
+      <li>Regular physical activity</li>
+      <li>Avoid excessive sugar</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="obesity" class="details">
+    <h2>Obesity</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Excess body weight</li>
+      <li>Fat accumulation in abdomen</li>
+      <li>Shortness of breath on exertion</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Eat light meals</li>
+      <li>Include daily exercise</li>
+      <li>Maintain regular meal timings</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="hypertension" class="details">
+    <h2>Hypertension</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Headaches and dizziness</li>
+      <li>Shortness of breath</li>
+      <li>Chest pain in severe cases</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Reduce salt intake</li>
+      <li>Meditation & stress relief</li>
+      <li>Eat cooling foods</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="indigestion" class="details">
+    <h2>Indigestion</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Bloating</li>
+      <li>Heartburn</li>
+      <li>Nausea</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Eat warm, easily digestible meals</li>
+      <li>Avoid heavy/oily foods</li>
+      <li>Chew food properly</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="skin" class="details">
+    <h2>Skin Disorders</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Rashes or irritation</li>
+      <li>Acne or pimples</li>
+      <li>Dry or flaky skin</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Use natural skincare</li>
+      <li>Avoid processed/junk food</li>
+      <li>Stay hydrated</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="jointpain" class="details">
+    <h2>Joint Pain</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Stiffness in joints</li>
+      <li>Swelling</li>
+      <li>Pain during movement</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Perform gentle yoga</li>
+      <li>Include anti-inflammatory foods</li>
+      <li>Maintain healthy weight</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="asthma" class="details">
+    <h2>Asthma</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Shortness of breath</li>
+      <li>Wheezing</li>
+      <li>Chest tightness</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Avoid allergens</li>
+      <li>Practice breathing exercises</li>
+      <li>Eat Kapha-pacifying foods</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="insomnia" class="details">
+    <h2>Insomnia</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Difficulty falling asleep</li>
+      <li>Frequent awakenings</li>
+      <li>Fatigue during day</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Practice meditation</li>
+      <li>Avoid caffeine before bed</li>
+      <li>Keep consistent sleep schedule</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="constipation" class="details">
+    <h2>Constipation</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Infrequent bowel movements</li>
+      <li>Hard stools</li>
+      <li>Abdominal discomfort</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Include fiber-rich foods</li>
+      <li>Drink plenty of water</li>
+      <li>Exercise regularly</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <div id="migraine" class="details">
+    <h2>Migraine</h2>
+    <h3>Symptoms:</h3>
+    <ul>
+      <li>Severe headache</li>
+      <li>Nausea or vomiting</li>
+      <li>Sensitivity to light and sound</li>
+    </ul>
+    <h3>Precautions:</h3>
+    <ul>
+      <li>Avoid stress and triggers</li>
+      <li>Practice relaxation techniques</li>
+      <li>Include cooling foods</li>
+    </ul>
+    <div class="close-btn"><a href="#">Close</a></div>
+    <div class="contact-btn"><a href="\page3.html">Contact Doctor</a></div>
+  </div>
+
+  <!-- Disease Cards -->
+  <div class="container">
+    <div class="card"><h3>Diabetes</h3><p>Kapha imbalance causing high blood sugar.</p><a href="#diabetes" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Obesity</h3><p>Due to slow metabolism and Kapha dominance.</p><a href="#obesity" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Hypertension</h3><p>Triggered by stress and aggravated Pitta dosha.</p><a href="#hypertension" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Indigestion</h3><p>Weak digestive fire (Agni) due to Vata imbalance.</p><a href="#indigestion" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Skin Disorders</h3><p>Caused by toxins and poor diet habits.</p><a href="#skin" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Joint Pain</h3><p>Arthritis and Vata aggravation in joints.</p><a href="#jointpain" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Asthma</h3><p>Kapha accumulation in lungs and airways.</p><a href="#asthma" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Insomnia</h3><p>Caused by stress and Vata imbalance.</p><a href="#insomnia" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Constipation</h3><p>Vata imbalance leading to digestive blockage.</p><a href="#constipation" class="view-btn">View Details</a></div>
+    <div class="card"><h3>Migraine</h3><p>Due to aggravated Pitta and stress.</p><a href="#migraine" class="view-btn">View Details</a></div>
+  </div>
+</body>
+</html>
